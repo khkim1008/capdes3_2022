@@ -87,3 +87,35 @@ rc('font', family=font_name)
 
 df.plot.line( y=['탑승객수'])
 #df.plot.bar( y=['탑승객수'])
+
+
+
+
+#CoLAB 에서 실행하기 위한 코드 -----------------------
+#https://colab.research.google.com/ 로그인
+import numpy as np
+import pandas as pd
+
+from google.colab import drive
+drive.mount('/gdrive')
+
+dataset = pd.read_excel('/gdrive/My Drive/data/BUS_02_이용자유형별버스정류소이용인원현황.xlsx') 
+dataset.info()
+
+from matplotlib import font_manager, rc
+!sudo apt-get install -y fonts-nanum
+!sudo fc-cache -fv
+!rm ~/.cache/matplotlib -rf
+
+import matplotlib.pyplot as plt
+plt.rc('font',family='NanumBarunGothic')
+
+
+
+
+
+
+
+
+
+
